@@ -87,4 +87,6 @@ with open(args.csv_file, 'r', newline='') as csv_file:
 		ws_master.cell(row=ws_row_counter, column=8, value=line[6].lstrip('0'))
 		ws_row_counter += 1
 
-wb.save('tdm_test.xlsx')
+
+final_tdm_name = args.objectname.upper() + "_TDM_final.xlsx"
+wb.save(final_tdm_name)
